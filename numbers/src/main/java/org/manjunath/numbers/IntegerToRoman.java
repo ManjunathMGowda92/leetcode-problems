@@ -17,7 +17,7 @@ public class IntegerToRoman {
 	 * @param number Input number for Conversion
 	 * @return Converted Roman Number
 	 */
-	public static String convertToRoman(int number) {
+	public String convertToRoman(int number) {
 		if (number == 0 || number < 0)
 			throw new RuntimeException("Number is below the range of Conversion. Should be between 1 to 3999");
 		
@@ -31,13 +31,13 @@ public class IntegerToRoman {
 		
 		/*
 		 * (number / 1000) -> produces the 1000's place number
-		 * (number % 100) / 100 -> produces the 100's place number
+		 * (number % 1000) / 100 -> produces the 100's place number
 		 * (number % 100)/10 -> produces the 10's place number
 		 * (number % 10) -> produces units place number
 		 */
 		
 		return thousands[number / 1000] 
-				+ hundreds[(number % 100) / 100] 
+				+ hundreds[(number % 1000) / 100] 
 				+ tens[(number % 100)/10]
 				+digits[(number % 10)];
 	}
