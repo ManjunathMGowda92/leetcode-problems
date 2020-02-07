@@ -36,5 +36,6 @@
 	<modules>
 		<module>arrays</module>
 		<module>strings</module>
+		<module>numbers</module>
 	</modules>
 </project>
